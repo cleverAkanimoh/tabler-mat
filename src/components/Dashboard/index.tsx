@@ -18,19 +18,24 @@ const Dashboard = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <DevelopmentActivity />
-        <div className="w-full">
+        <div className="w-full space-y-4">
           <h2 className="p-3 border border-blue-300 bg-blue-200/70 rounded-[3px] mb-4 text-sm w-full">
-            <strong>Read our documentation</strong> with code samples
+            <strong>
+              <a href="https://github.com/cleverakanimoh/tabler-mat">
+                Read our documentation
+              </a>
+            </strong>{" "}
+            with code samples
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <DonutChart />
             <PieChart />
           </div>
+          <div className="grid grid-cols-2 gap-4">
+            <FeedbackCard title="New Feedback" />
+            <FeedbackCard title="Today Profit" />
+          </div>
         </div>
-      </div>
-      <div className="grid grid-cols-2 gap-4">
-        <FeedbackCard title="New Feedback" />
-        <FeedbackCard title="Today Profit" />
       </div>
     </div>
   );
