@@ -44,7 +44,7 @@ const NotificationWithIndicator = () => {
           setShowNotificationDropdown((prev) => !prev);
         }}
       >
-        {showNotificationDropdown && (
+        {!showNotificationDropdown && (
           <span className="size-1.5 bg-red-600 absolute -right-1 top-0 rounded-full" />
         )}
         <NotificationIcon />
