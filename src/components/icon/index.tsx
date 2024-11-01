@@ -78,14 +78,14 @@ export const InterfaceIcon = () => (
     <path
       d="M12 21.61V12.54"
       stroke="currentColor"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M9.93001 2.48004L4.59001 5.44004C3.38001 6.11004 2.39001 7.79004 2.39001 9.17004V14.82C2.39001 16.2 3.38001 17.88 4.59001 18.55L9.93001 21.52C11.07 22.15 12.94 22.15 14.08 21.52L19.42 18.55C20.63 17.88 21.62 16.2 21.62 14.82V9.17004C21.62 7.79004 20.63 6.11004 19.42 5.44004L14.08 2.47004C12.93 1.84004 11.07 1.84004 9.93001 2.48004Z"
       stroke="currentColor"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -117,14 +117,14 @@ export const PagesIcon = () => (
     <path
       d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14"
       stroke="currentColor"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M22 10H18C15 10 14 9 14 6V2L22 10Z"
       stroke="currentColor"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -142,14 +142,14 @@ export const FormsIcon = () => (
     <path
       d="M11 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15V13"
       stroke="currentColor"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M16.04 3.02001L8.16 10.9C7.86 11.2 7.56 11.79 7.5 12.22L7.07 15.23C6.91 16.32 7.68 17.08 8.77 16.93L11.78 16.5C12.2 16.44 12.79 16.14 13.1 15.84L20.98 7.96001C22.34 6.60001 22.98 5.02001 20.98 3.02001C18.98 1.02001 17.4 1.66001 16.04 3.02001Z"
       stroke="currentColor"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke-miterlimit="10"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -157,7 +157,7 @@ export const FormsIcon = () => (
     <path
       d="M14.91 4.1499C15.58 6.5399 17.45 8.4099 19.85 9.0899"
       stroke="currentColor"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke-miterlimit="10"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -176,28 +176,28 @@ export const ComponentsIcon = () => (
     <path
       d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
       stroke="currentColor"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M10 2V22"
       stroke="currentColor"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M10 8.5H22"
       stroke="currentColor"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M10 15.5H22"
       stroke="currentColor"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -229,7 +229,7 @@ export const TrashIcon = () => (
     <path
       d="M18.85 9.14001L18.2 19.21C18.09 20.78 18 22 15.21 22H8.79002C6.00002 22 5.91002 20.78 5.80002 19.21L5.15002 9.14001"
       stroke="currentColor"
-      stroke-width="1.5"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -244,6 +244,44 @@ export const TrashIcon = () => (
       d="M9.5 12.5H14.5"
       stroke="currentColor"
       stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const ArrowUpIcon = () => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19.9201 15.0499L13.4001 8.52989C12.6301 7.75989 11.3701 7.75989 10.6001 8.52989L4.08008 15.0499"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const ArrowDownIcon = () => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19.9201 8.94995L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.94995"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-miterlimit="10"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
