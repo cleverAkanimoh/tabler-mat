@@ -1,5 +1,9 @@
-import React from "react";
+import { RootState } from "@/store";
+import { fetchChartDataRequest } from "@/store/slices/chartSlice";
+import React, { useEffect } from "react";
 import { Chart, GoogleChartTicks } from "react-google-charts";
+import { useDispatch, useSelector } from "react-redux";
+import Loading from "../Loading";
 
 export interface OptionsType {
   [otherOptionKey: string]: any;
@@ -40,20 +44,23 @@ export interface OptionsType {
   colors: string[] | undefined;
 }
 
-const PieChart: React.FC = ({
-  data,
-  options,
-}: {
-  data?: (string | number)[][];
-  options?: OptionsType;
-}) => {
-  const defaultData = [
-    ["Slice", "Percentage"],
-    ["Slice 1", 47.4],
-    ["Slice 2", 33.1],
-    ["Slice 3", 10.5],
-    ["Slice 4", 9.0],
-  ];
+const PieChart: React.FC = () => {
+  const dispatch = useDispatch();
+  const { data, loading } = useSelector((state: RootState) => state.charts);
+
+  useEffect(() => {
+    dispatch(fetchChartDataRequest());
+  }, [dispatch]);
+
+  // const defaultData = [
+  //   ["Slice", "Percentage"],
+  //   ["Slice 1", 47.4],
+  //   ["Slice 2", 33.1],
+  //   ["Slice 3", 10.5],
+  //   ["Slice 4", 9.0],
+  // ];
+
+  console.log(data);
 
   const defaultOptions = {
     title: "",
@@ -72,13 +79,17 @@ const PieChart: React.FC = ({
       <div className="border-b">
         <h4 className="text-gray-700  p-4">Chart Title</h4>
       </div>
-      <Chart
-        chartType="PieChart"
-        width="100%"
-        height="300px"
-        data={data ? data : defaultData}
-        options={options ? options : defaultOptions}
-      />
+      {loading ? (
+        <Loading />
+      ) : (
+        <Chart
+          chartType="PieChart"
+          width="100%"
+          height="300px"
+          data={data}
+          options={defaultOptions}
+        />
+      )}
     </div>
   );
 };

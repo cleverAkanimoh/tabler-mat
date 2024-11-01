@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 import { call, put, takeLatest } from "redux-saga/effects";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-// Define the initial state
 interface ChartState {
   data: { name: string; value: number }[];
   loading: boolean;
@@ -66,10 +65,12 @@ function fetchChartDataFromAPI() {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([
-        { name: "Category 1", value: 37 },
-        { name: "Category 2", value: 43 },
-        { name: "Category 3", value: 20 },
+        ["Slice", "Percentage"],
+        ["Slice 1", 47.4],
+        ["Slice 2", 33.1],
+        ["Slice 3", 10.5],
+        ["Slice 4", 9.0],
       ]);
-    }, 1000);
+    }, 4000);
   });
 }
