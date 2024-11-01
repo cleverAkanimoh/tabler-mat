@@ -1,3 +1,4 @@
+import { TrashIcon } from "../icon";
 import {
   Tooltip,
   TooltipContent,
@@ -78,6 +79,8 @@ const SingleUser = ({
       {date}
     </span>
 
-    <button className="size-5 max-md:absolute max-md:right-5 max-md:bottom-4" />
+    <button className="max-md:absolute max-md:right-5 max-md:bottom-4">
+      <TrashIcon />
+    </button>
   </div>
 );
