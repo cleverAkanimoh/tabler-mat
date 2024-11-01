@@ -56,8 +56,10 @@ const SingleUser = ({
 
       <h3 className="truncate">{username}</h3>
     </div>
-    <p className="truncate max-md:pl-7 md:basis-1/4">{message}</p>
-    <span className="max-md:absolute max-md:right-5 md:basis-1/4">{date}</span>
+    <p className="truncate max-md:pl-7 md:basis-1/4 md:text-sm">{message}</p>
+    <span className="max-md:absolute max-md:right-5 md:basis-1/4 max-xs:text-sm">
+      {date}
+    </span>
 
     <button className="size-5" />
   </div>
