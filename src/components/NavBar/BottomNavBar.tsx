@@ -32,7 +32,7 @@ export const BottomNavBar = ({
             }
           )}
         >
-          <TooltipProvider>
+          <TooltipProvider delayDuration={0.3}>
             <Tooltip>
               <TooltipTrigger>{item.icon}</TooltipTrigger>
               <TooltipContent className="bg-white border border-blue-100 rounded md:hidden">
