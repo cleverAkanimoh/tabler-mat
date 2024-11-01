@@ -2,7 +2,6 @@ import { UserButton, useUser } from "@clerk/clerk-react";
 
 function ProfileHeader() {
   const { user } = useUser();
-  console.log(user);
 
   return (
     <>
