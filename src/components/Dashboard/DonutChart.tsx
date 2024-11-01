@@ -55,7 +55,7 @@ const DonutChart: React.FC = ({
 
   const defaultOptions = {
     title: "",
-    pieHole: 0.55,
+    pieHole: 0.5,
     is3D: false,
     slices: [{ color: "#5dba2c" }, { color: "#8ecf40" }],
   };
