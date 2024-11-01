@@ -79,7 +79,7 @@ const SingleUser = ({
       {date}
     </span>
 
-    <button className="max-md:absolute max-md:right-5 max-md:bottom-4">
+    <button className="max-md:absolute max-md:right-5 max-md:bottom-4 xs:text-gray-300 xs:hover:text-gray-400 transition-colors duration-300">
       <TrashIcon />
     </button>
   </div>
