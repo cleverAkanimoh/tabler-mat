@@ -18,7 +18,7 @@ export const BottomNavBar = ({
     <header
       className={clsx(
         headerStyle,
-        "pt-2 gap-3 xs:gap-6 sm:gap-8 lg:gap-10 w-full bg-white border-b shadow-sm"
+        "pt-2 gap-4 xs:gap-6 sm:gap-8 lg:gap-10 w-full bg-white border-b shadow-sm"
       )}
     >
       {navItems.map((item) => (

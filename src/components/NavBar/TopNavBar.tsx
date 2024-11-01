@@ -9,7 +9,7 @@ import { useState } from "react";
 export const TopNavBar = ({ headerStyle }: { headerStyle: string }) => (
   <header className={clsx(headerStyle, "justify-between border-b pb-2")}>
     <Logo />
-    <div className="flex items-center gap-2 xs:gap-4 lg:gap-5">
+    <div className="flex items-center gap-6 xs:gap-8 lg:gap-10">
       <a
         href="http://github.com/cleverakanimoh/tabler-mat"
         target="_blank"
