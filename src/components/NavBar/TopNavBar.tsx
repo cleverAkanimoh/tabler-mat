@@ -2,14 +2,7 @@ import clsx from "clsx";
 import { NotificationIcon } from "../icon";
 import ProfileHeader from "../ProfileHeader";
 import Logo from "../Logo";
-import {
-  GoogleOneTap,
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-  UserProfile,
-} from "@clerk/clerk-react";
+import { SignedIn, SignedOut, SignInButton } from "@clerk/clerk-react";
 
 export const TopNavBar = ({ headerStyle }: { headerStyle: string }) => (
   <header className={clsx(headerStyle, "justify-between border-b pb-2")}>
