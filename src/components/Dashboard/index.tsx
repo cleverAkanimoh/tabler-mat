@@ -3,8 +3,21 @@ import DevelopmentActivity from "@/components/Dashboard/DevelopmentActivity";
 import PieChart from "@/components/Dashboard/PieChart";
 import FeedbackCard from "./FeedbackCard";
 import DonutChart from "./DonutChart";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/store";
+import { useEffect } from "react";
+import { fetchStatsDataRequest } from "@/store/slices/statsSlice";
 
 const Dashboard = () => {
+  const dispatch = useDispatch();
+  const { data, loading } = useSelector((state: RootState) => state.stats);
+
+  useEffect(() => {
+    dispatch(fetchStatsDataRequest());
+  }, [dispatch]);
+
+  console.log(data, loading);
+
   return (
     <div className="grid gap-4 container">
       <h1 className="text-gray-600">Dashboard</h1>

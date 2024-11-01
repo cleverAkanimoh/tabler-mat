@@ -17,3 +17,5 @@ export const navItems = [
   { icon: GalleryIcon(), text: "Gallery", isActive: false },
   { icon: DocumentIcon(), text: "Documentation", isActive: false },
 ];
+
+export const currencyFreakUrl = `https://api.currencyfreaks.com/v2.0/rates/latest?apikey=993f3dfb498d43aaa60b70e7393b91d7`;

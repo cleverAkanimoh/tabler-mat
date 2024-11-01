@@ -52,16 +52,6 @@ const PieChart: React.FC = () => {
     dispatch(fetchChartDataRequest());
   }, [dispatch]);
 
-  // const defaultData = [
-  //   ["Slice", "Percentage"],
-  //   ["Slice 1", 47.4],
-  //   ["Slice 2", 33.1],
-  //   ["Slice 3", 10.5],
-  //   ["Slice 4", 9.0],
-  // ];
-
-  console.log(data);
-
   const defaultOptions = {
     title: "",
     pieHole: 0,

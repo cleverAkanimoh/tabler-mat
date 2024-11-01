@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import chartReducer from "./slices/chartSlice";
+import statsReducer from "./slices/statsSlice";
 import rootSaga from "./saga";
 
 const sagaMiddleware = createSagaMiddleware();
@@ -8,6 +9,7 @@ const sagaMiddleware = createSagaMiddleware();
 const store = configureStore({
   reducer: {
     charts: chartReducer,
+    stats: statsReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ thunk: false }).concat(sagaMiddleware),
