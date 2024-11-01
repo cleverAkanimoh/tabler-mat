@@ -17,7 +17,7 @@ const StatsCard: React.FC<StatsCardProps> = ({ title, value, change }) => {
           }`}
         >
           {change}
-          {/* {change.startsWith("-") ?  } */}
+          {change.startsWith("-") ? <ArrowUpIcon /> : <ArrowDownIcon />}
         </span>
 
         <p className="text-2xl font-semibold">{value}</p>
