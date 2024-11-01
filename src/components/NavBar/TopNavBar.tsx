@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { NotificationIcon } from "../icon";
-import ProfileHeader from "../ProfileHeader";
-import Logo from "../Logo";
+import ProfileHeader from "../Dashboard/ProfileHeader";
+import Logo from "./Logo";
 import { SignedIn, SignedOut, SignInButton } from "@clerk/clerk-react";
 
 export const TopNavBar = ({ headerStyle }: { headerStyle: string }) => (

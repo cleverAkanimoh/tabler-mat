@@ -40,7 +40,7 @@ export interface OptionsType {
   colors: string[] | undefined;
 }
 
-const PieChart: React.FC = ({
+const DonutChart: React.FC = ({
   data,
   options,
 }: {
@@ -48,17 +48,16 @@ const PieChart: React.FC = ({
   options?: OptionsType;
 }) => {
   const defaultData = [
-    ["Category", "Percentage"],
-    ["Category 1", 37],
-    ["Category 2", 43],
-    ["Category 3", 20],
+    ["Ring", "Percentage"],
+    ["Ring 1", 63.0],
+    ["Ring 2", 37.0],
   ];
 
   const defaultOptions = {
     title: "",
-    pieHole: 0.4,
+    pieHole: 0.55,
     is3D: false,
-    slices: [{ color: "#4caf50" }, { color: "#ffeb3b" }, { color: "#4caf50" }],
+    slices: [{ color: "#5dba2c" }, { color: "#8ecf40" }],
   };
 
   return (
@@ -77,4 +76,4 @@ const PieChart: React.FC = ({
   );
 };
 
-export default PieChart;
+export default DonutChart;

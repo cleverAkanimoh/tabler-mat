@@ -2,9 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import NavBar from "./components/NavBar";
 import "./index.css";
-import { GoogleOneTap, SignedOut, UserProfile } from "@clerk/clerk-react";
-import SignUp from "./components/SignUp";
-import SignIn from "./components/SignIn";
+import { SignedOut } from "@clerk/clerk-react";
+import SignUp from "./components/NavBar/SignUp";
+import SignIn from "./components/NavBar/SignIn";
 
 const App = () => {
   return (
@@ -14,21 +14,10 @@ const App = () => {
         element={
           <>
             <NavBar />
-            <GoogleOneTap />
-            <div className="bg-gray-100 min-h-screen p-8">
+            <div className="bg-gray-100 min-h-screen py-6">
               <Dashboard />
             </div>
           </>
-        }
-      />
-
-      <Route
-        path="/profile"
-        element={
-          <div className="xs:mx-auto w-full">
-            <NavBar />
-            <UserProfile />
-          </div>
         }
       />
 
