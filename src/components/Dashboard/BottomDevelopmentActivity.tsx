@@ -1,3 +1,10 @@
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
+
 function BottomDevelopmentActivity() {
   return (
     <div>
@@ -54,13 +61,23 @@ const SingleUser = ({
         className="size-5 rounded-full"
       />
 
-      <h3 className="truncate">{username}</h3>
+      <h3 className="md:text-sm shrink-0">{username}</h3>
     </div>
-    <p className="truncate max-md:pl-7 md:basis-1/4 md:text-sm">{message}</p>
-    <span className="max-md:absolute max-md:right-5 md:basis-1/4 max-xs:text-sm">
+
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger className="line-clamp-1 max-md:pl-7 md:basis-1/4 md:text-sm text-start max-md:cursor-text">
+          {message}
+        </TooltipTrigger>
+        <TooltipContent className="bg-white border border-blue-100 rounded max-md:hidden">
+          {message}
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+    <span className="max-md:absolute max-md:right-5 md:basis-1/4 text-sm">
       {date}
     </span>
 
-    <button className="size-5" />
+    <button className="size-5 max-md:absolute max-md:right-5 max-md:bottom-4" />
   </div>
 );

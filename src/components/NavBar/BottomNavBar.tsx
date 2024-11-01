@@ -1,5 +1,11 @@
 import clsx from "clsx";
 import Headroom from "react-headroom";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 export const BottomNavBar = ({
   headerStyle,
@@ -12,7 +18,7 @@ export const BottomNavBar = ({
     <header
       className={clsx(
         headerStyle,
-        "pt-2 gap-2 xs:gap-4 sm:gap-5 lg:gap-8 w-full bg-white border-b shadow-sm"
+        "pt-2 gap-3 xs:gap-6 sm:gap-8 lg:gap-10 w-full bg-white border-b shadow-sm"
       )}
     >
       {navItems.map((item) => (
@@ -26,7 +32,14 @@ export const BottomNavBar = ({
             }
           )}
         >
-          <>{item.icon}</>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>{item.icon}</TooltipTrigger>
+              <TooltipContent className="bg-white border border-blue-100 rounded md:hidden">
+                {item.text}
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
           <span
             className={clsx("md:block xs:text-xs", {
               hidden: !item.isActive,
