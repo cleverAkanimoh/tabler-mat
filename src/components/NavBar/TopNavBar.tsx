@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { NotificationIcon } from "../icon";
 import ProfileHeader from "../ProfileHeader";
 import Logo from "../Logo";
+import { SignedIn } from "@clerk/clerk-react";
 
 export const TopNavBar = ({ headerStyle }: { headerStyle: string }) => (
   <header className={clsx(headerStyle, "justify-between border-b pb-2")}>
@@ -18,7 +19,9 @@ export const TopNavBar = ({ headerStyle }: { headerStyle: string }) => (
 
       <NotificationWithIndicator />
 
-      <ProfileHeader />
+      <SignedIn>
+        <ProfileHeader />
+      </SignedIn>
     </div>
   </header>
 );

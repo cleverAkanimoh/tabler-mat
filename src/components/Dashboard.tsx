@@ -4,6 +4,19 @@ import PieChart from "@/components/PieChart";
 import FeedbackCard from "@/components/FeedbackCard";
 
 const Dashboard = () => {
+  const pieChartData1 = [
+    ["Category", "Percentage"],
+    ["Category 1", 37],
+    ["Category 2", 43],
+    ["Category 3", 20],
+  ];
+
+  const pieChartOptions1 = {
+    title: "",
+    pieHole: 0.4,
+    is3D: false,
+    slices: [{ color: "#4caf50" }, { color: "#ffeb3b" }, { color: "#4caf50" }],
+  };
   return (
     <div className="p-4 grid gap-4">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -16,8 +29,15 @@ const Dashboard = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <DevelopmentActivity />
-        {/* <PieChart title="Category Distribution" data={[37, 43, 20]} /> */}
-        <PieChart title="Product Shares" data={[47.4, 33.1, 10.5, 9]} />
+        <div>
+          <h2 className="p-3 border border-blue-300 bg-blue-200/70 rounded-[3px] mb-4 text-sm">
+            <strong>Read our documentation</strong> with code samples
+          </h2>
+          <div>
+            <PieChart />
+            <PieChart />
+          </div>
+        </div>
       </div>
       <div className="grid grid-cols-2 gap-4">
         <FeedbackCard title="New Feedback" />

@@ -1,50 +1,37 @@
 import React from "react";
-import { Line } from "react-chartjs-2";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+import { Chart } from "react-google-charts";
 
 const DevelopmentActivity: React.FC = () => {
-  const data = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-    datasets: [
-      {
-        label: "Purchases",
-        data: [5, 15, 10, 20, 30, 25],
-        fill: false,
-        borderColor: "#3b82f6",
-        tension: 0.1,
-      },
-    ],
+  const data = [
+    ["Month", "Purchases"],
+    ["Jan", 5],
+    ["Feb", 15],
+    ["Mar", 10],
+    ["Apr", 20],
+    ["May", 30],
+    ["Jun", 25],
+  ];
+
+  const options = {
+    title: "",
+    curveType: "function",
+    legend: { position: "" },
+    colors: ["#3b82f6"],
   };
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Development Activity</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <Line data={data} />
-      </CardContent>
-    </Card>
+    <div className="bg-white rounded border basis-[40%]">
+      <div className="border-b">
+        <h4 className="text-gray-700  p-4">Development Activity</h4>
+      </div>
+      <Chart
+        chartType="LineChart"
+        width="100%"
+        height="300px"
+        data={data}
+        options={options}
+      />
+    </div>
   );
 };
 
