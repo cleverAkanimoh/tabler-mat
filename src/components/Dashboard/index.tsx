@@ -16,8 +16,6 @@ const Dashboard = () => {
     dispatch(fetchStatsDataRequest());
   }, [dispatch]);
 
-  console.log(data, loading);
-
   return (
     <div className="grid gap-4 container">
       <h1 className="text-gray-600">Dashboard</h1>
@@ -39,13 +37,19 @@ const Dashboard = () => {
         />
         <StatsCard
           title="Followers"
-          value={loading ? "0" : "27.3k"}
+          value={
+            loading ? "0" : `${data[5]?.value || "0"}.${data[1]?.value || "0"}k`
+          }
           change="+3%"
         />
-        <StatsCard title="Daily Earnings" value="$95" change="-2%" />
         <StatsCard
-          title="Products"
-          value={loading ? "0" : `${data[5]?.value}`}
+          title="Daily Earnings"
+          value={loading ? "0" : `$${data[4]?.value}`}
+          change="-2%"
+        />
+        <StatsCard
+          title={`Product${loading ? "" : data[2]?.value > 0 ? "s" : ""}`}
+          value={loading ? "0" : `${data[2]?.value}`}
           change="-1%"
         />
       </div>
